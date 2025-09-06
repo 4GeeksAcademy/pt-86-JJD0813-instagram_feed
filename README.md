@@ -1,8 +1,6 @@
 # Instagram Feed (Bootstrap)
 
 [![Live – GitHub Pages](https://img.shields.io/badge/Live-GitHub%20Pages-brightgreen)](https://4geeksacademy.github.io/pt-86-JJD0813-instagram_feed/)
-![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3-blue)
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 A clean Instagram-style feed built with **HTML**, **CSS**, and **Bootstrap 5**.  
 Includes a responsive navbar, post cards, and a **Grid/List** layout switcher.
