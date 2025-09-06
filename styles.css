@@ -1,0 +1,30 @@
+.card {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.card-img-top {
+  height: 400px;
+  object-fit: cover;
+  width: 100%;
+
+}
+
+.gear-icon {
+  color: #212529 !important;
+}
+
+
+
+.feed.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1rem;
+  justify-content: center;           
+}
+
+
+.feed.grid .card { margin: 0; height: 100%; }
+
+.feed.grid .card-img-top { width: 100%; height: 300px; object-fit: cover; }
+

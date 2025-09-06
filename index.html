@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</head>
+
+
+
+<body class="bg-primary-subtle">
+  <nav class="navbar navbar-expand-lg bg-white rounded-3 shadow-sm border px-3 my-0">
+    <div class="container-fluid px-0">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <i class="bi bi-instagram"></i>
+        <span>Instagram</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav position-absolute start-50 translate-middle-x align-items-center">
+          <li class="nav-item">
+            <button type="button" id="btnGrid" class="btn btn-light border" aria-label="Show grid">
+              <i class="bi bi-grid-3x3-gap"></i>
+            </button>
+            <button type="button" id="btnList" class="btn btn-light border" aria-label="Show list">
+              <i class="bi bi-list"></i>
+            </button>
+          </li>
+        </ul>
+        <div class="d-flex align-items-center gap-2 ms-auto">
+          <button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#createPostModal">
+            Create a new post
+          </button>
+          <div class="btn-group">
+            <button class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-gear-fill text-white"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="#">Settings</a></li>
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+              <li><a class="dropdown-item" href="#">Accessibility</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+            </ul>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+
+  </nav>
+  <main class="feed container mt-4">
+    <article class="card mb-4">
+      <header class="card-header d-flex justify-content-between">
+        <h2 class="h5 mb-0">What a happy go lucky feller we have right here!</h2>
+      </header>
+      <img class="card-img-top"
+        src="https://plus.unsplash.com/premium_photo-1723708863829-7a079bbcc149?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="Chocolate Labs" />
+      <div class="card-body">
+        <div class="fw-bold">105 Likes</div>
+        <p class="card-text">
+          These bad boys love to swim and go hiking, strong ones 💪🏽
+          <a href="#" class="post__tag">@Dog Lovers</a>
+        </p>
+      </div>
+      <div class="card-footer">
+        ❤️ 💬
+      </div>
+    </article>
+    <article class="card mb-4">
+      <header class="card-header d-flex justify-content-between">
+        <h2 class="h5 mb-0">THE KING</h2>
+      </header>
+      <img class="card-img-top"
+        src="https://plus.unsplash.com/premium_photo-1669725687221-6fe12c2da6b1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YW5pbWFsc3xlbnwwfHwwfHx8MA%3D%3D"
+        alt="Leos Rock" />
+      <div class="card-body">
+        <div class="fw-bold">205 Likes</div>
+        <p class="card-text">
+          Everybody knows the KING of the wild 🦁
+          <a href="#" class="post__tag">@SIMBA</a>
+        </p>
+      </div>
+      <div class="card-footer">
+        🌻
+      </div>
+    </article>
+    <article class="card mb-4">
+      <header class="card-header d-flex justify-content-between">
+        <h2 class="h5 mb-0">Jungle Book Does Not Lie</h2>
+      </header>
+      <img class="card-img-top"
+        src="https://images.unsplash.com/photo-1527161153332-99adcc6f2966?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="Leos Rock" />
+      <div class="card-body">
+        <div class="fw-bold">302 Likes</div>
+        <p class="card-text">
+          Huge creatures with a soft soul 🐘
+          <a href="#" class="post__tag">@Elephants</a>
+        </p>
+      </div>
+      <div class="card-footer">
+        🧡🧡🧡
+      </div>
+    </article>
+  </main>
+  <div class="modal fade" id="createPostModal" tabindex="-1" aria-labelledby="createPostLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="createPostLabel">Create a new post</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body">
+          <form id="updateeventsform2" class="form-horizontal">
+            <div class="form-group">
+              <label for='areaforinfo'>Caption:</label>
+              <textarea class="form-control" id='areaforinfo' style="min-width: 100%" readonly></textarea>
+            </div>
+          </form>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Close</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Publish</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="galleryLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="galleryLabel">Photos Selections</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body">
+          <div class="row row-cols-2 row-cols-md-3 g-2">
+            <div class="col">
+              <div class="ratio ratio-1x1">
+                <img class="w-100 h-100 rounded" style="object-fit:cover"
+                  src="https://plus.unsplash.com/premium_photo-1723708863829-7a079bbcc149?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Chocolate Labs">
+              </div>
+            </div>
+            <div class="col">
+              <div class="ratio ratio-1x1">
+                <img class="w-100 h-100 rounded" style="object-fit:cover"
+                  src="https://plus.unsplash.com/premium_photo-1669725687221-6fe12c2da6b1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YW5pbWFsc3xlbnwwfHwwfHx8MA%3D%3D"
+                  alt="Lion">
+              </div>
+            </div>
+            <div class="col">
+              <div class="ratio ratio-1x1">
+                <img class="w-100 h-100 rounded" style="object-fit:cover"
+                  src="https://images.unsplash.com/photo-1527161153332-99adcc6f2966?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Elephants">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal" type="button">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+  const feed    = document.querySelector('.feed');
+  const btnGrid = document.getElementById('btnGrid');   
+  const btnList = document.getElementById('btnList');      
+
+  function setMode(mode) {
+    const isGrid = mode === 'grid';
+
+    // 1) Layout
+    feed.classList.toggle('grid', isGrid);
+
+    // 2) Button appearances (make it explicit, no toggle confusion)
+    if (isGrid) {
+      btnGrid.classList.remove('btn-light');
+      btnGrid.classList.add('btn-primary');
+
+      btnList.classList.remove('btn-primary');
+      btnList.classList.add('btn-light');
+    } else {
+      btnGrid.classList.remove('btn-primary');
+      btnGrid.classList.add('btn-light');
+
+      btnList.classList.remove('btn-light');
+      btnList.classList.add('btn-primary');
+    }
+  }
+
+  // Wire up clicks
+  btnGrid.addEventListener('click', () => setMode('grid'));
+  btnList.addEventListener('click', () => setMode('list'));
+
+  // Start in list mode
+  setMode('list');
+</script>
+
+
+
+</body>
+
+</html>
