@@ -2,19 +2,44 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
+
+  <style>
+    .feed:not(.grid) .ratio {
+      --bs-aspect-ratio: 66.6667% !important
+    }
+
+    .feed.grid .ratio {
+      --bs-aspect-ratio: 100% !important
+    }
+
+    .feed.grid .card {
+      display: flex;
+      flex-direction: column;
+      height: 100%
+    }
+
+    .feed.grid .card-body {
+      flex: 1
+    }
+
+    .ratio img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center
+    }
+  </style>
 </head>
-
-
 
 <body class="bg-primary-subtle">
   <nav class="navbar navbar-expand-lg bg-white rounded-3 shadow-sm border px-3 my-0">
@@ -59,69 +84,205 @@
             </ul>
           </div>
         </div>
-
-
-
       </div>
     </div>
-
   </nav>
+
   <main class="feed container mt-4">
-    <article class="card mb-4">
-      <header class="card-header d-flex justify-content-between">
-        <h2 class="h5 mb-0">What a happy go lucky feller we have right here!</h2>
-      </header>
-      <img class="card-img-top"
-        src="https://plus.unsplash.com/premium_photo-1723708863829-7a079bbcc149?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        alt="Chocolate Labs" />
-      <div class="card-body">
-        <div class="fw-bold">105 Likes</div>
-        <p class="card-text">
-          These bad boys love to swim and go hiking, strong ones 💪🏽
-          <a href="#" class="post__tag">@Dog Lovers</a>
-        </p>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+      <div class="col">
+        <article class="card h-100 d-flex flex-column">
+          <header class="card-header d-flex justify-content-between">
+            <h2 class="h5 mb-0">What a happy go lucky feller</h2>
+          </header>
+          <div class="ratio overflow-hidden">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1723708863829-7a079bbcc149?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="card-img-top w-100 h-100 object-fit-cover" alt="Chocolate Labs">
+          </div>
+          <div class="card-body flex-grow-1">
+            <div class="fw-bold">105 Likes</div>
+            <p class="card-text">
+              These bad boys love to swim and go hiking, strong ones 💪🏽
+              <a href="#" class="post__tag">@Dog Lovers</a>
+            </p>
+          </div>
+          <div class="card-footer mt-auto">❤️ 💬</div>
+        </article>
       </div>
-      <div class="card-footer">
-        ❤️ 💬
+
+      <div class="col">
+        <article class="card h-100 d-flex flex-column">
+          <header class="card-header d-flex justify-content-between">
+            <h2 class="h5 mb-0">THE KING</h2>
+          </header>
+          <div class="ratio overflow-hidden">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1669725687221-6fe12c2da6b1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YW5pbWFsc3xlbnwwfHwwfHx8MA%3D%3D"
+              class="card-img-top w-100 h-100 object-fit-cover" alt="Leos Rock">
+          </div>
+          <div class="card-body flex-grow-1">
+            <div class="fw-bold">205 Likes</div>
+            <p class="card-text">
+              Everybody knows the KING of the wild 🦁
+              <a href="#" class="post__tag">@SIMBA</a>
+            </p>
+          </div>
+          <div class="card-footer mt-auto">🌻</div>
+        </article>
       </div>
-    </article>
-    <article class="card mb-4">
-      <header class="card-header d-flex justify-content-between">
-        <h2 class="h5 mb-0">THE KING</h2>
-      </header>
-      <img class="card-img-top"
-        src="https://plus.unsplash.com/premium_photo-1669725687221-6fe12c2da6b1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YW5pbWFsc3xlbnwwfHwwfHx8MA%3D%3D"
-        alt="Leos Rock" />
-      <div class="card-body">
-        <div class="fw-bold">205 Likes</div>
-        <p class="card-text">
-          Everybody knows the KING of the wild 🦁
-          <a href="#" class="post__tag">@SIMBA</a>
-        </p>
+
+      <div class="col">
+        <article class="card h-100 d-flex flex-column">
+          <header class="card-header d-flex justify-content-between">
+            <h2 class="h5 mb-0">Jungle Book Does Not Lie</h2>
+          </header>
+          <div class="ratio overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1527161153332-99adcc6f2966?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="card-img-top w-100 h-100 object-fit-cover" alt="Leos Rock">
+          </div>
+          <div class="card-body flex-grow-1">
+            <div class="fw-bold">302 Likes</div>
+            <p class="card-text">
+              Huge creatures with a soft soul 🐘
+              <a href="#" class="post__tag">@Elephants</a>
+            </p>
+          </div>
+          <div class="card-footer mt-auto">🧡🧡🧡</div>
+        </article>
       </div>
-      <div class="card-footer">
-        🌻
+
+      <div class="col">
+        <article class="card h-100 d-flex flex-column">
+          <header class="card-header d-flex justify-content-between">
+            <h2 class="h5 mb-0">THE KING</h2>
+          </header>
+          <div class="ratio overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1574870111867-089730e5a72b?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="card-img-top w-100 h-100 object-fit-cover" alt="Tall Giants">
+          </div>
+          <div class="card-body flex-grow-1">
+            <div class="fw-bold">55 Likes</div>
+            <p class="card-text">
+              Watch out he may hit your roof
+              <a href="#" class="post__tag">@GIRRAFE</a>
+            </p>
+          </div>
+          <div class="card-footer mt-auto">🎈</div>
+        </article>
       </div>
-    </article>
-    <article class="card mb-4">
-      <header class="card-header d-flex justify-content-between">
-        <h2 class="h5 mb-0">Jungle Book Does Not Lie</h2>
-      </header>
-      <img class="card-img-top"
-        src="https://images.unsplash.com/photo-1527161153332-99adcc6f2966?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        alt="Leos Rock" />
-      <div class="card-body">
-        <div class="fw-bold">302 Likes</div>
-        <p class="card-text">
-          Huge creatures with a soft soul 🐘
-          <a href="#" class="post__tag">@Elephants</a>
-        </p>
+
+      <div class="col">
+        <article class="card h-100 d-flex flex-column">
+          <header class="card-header d-flex justify-content-between">
+            <h2 class="h5 mb-0">THE KING</h2>
+          </header>
+          <div class="ratio overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1484406566174-9da000fda645?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZGVlcnxlbnwwfHwwfHx8MA%3D%3D"
+              class="card-img-top w-100 h-100 object-fit-cover" alt="John Deer">
+          </div>
+          <div class="card-body flex-grow-1">
+            <div class="fw-bold">75 Likes</div>
+            <p class="card-text">
+              They have bucks running across the grass
+              <a href="#" class="post__tag">@Hoofs</a>
+            </p>
+          </div>
+          <div class="card-footer mt-auto">🦌</div>
+        </article>
       </div>
-      <div class="card-footer">
-        🧡🧡🧡
+
+      <div class="col">
+        <article class="card h-100 d-flex flex-column">
+          <header class="card-header d-flex justify-content-between">
+            <h2 class="h5 mb-0">BIRDY</h2>
+          </header>
+          <div class="ratio overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1486365227551-f3f90034a57c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="card-img-top w-100 h-100 object-fit-cover" alt="FlY AWAY">
+          </div>
+          <div class="card-body flex-grow-1">
+            <div class="fw-bold">90 Likes</div>
+            <p class="card-text">
+              See the sky
+              <a href="#" class="post__tag">@Wings</a>
+            </p>
+          </div>
+          <div class="card-footer mt-auto">🕊️</div>
+        </article>
       </div>
-    </article>
+
+      <div class="col">
+        <article class="card h-100 d-flex flex-column">
+          <header class="card-header d-flex justify-content-between">
+            <h2 class="h5 mb-0">Climb high</h2>
+          </header>
+          <div class="ratio overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1533651180995-3b8dcd33e834?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="card-img-top w-100 h-100 object-fit-cover" alt="FlY AWAY">
+          </div>
+          <div class="card-body flex-grow-1">
+            <div class="fw-bold">110 Likes</div>
+            <p class="card-text">
+              See the sky
+              <a href="#" class="post__tag">@smile</a>
+            </p>
+          </div>
+          <div class="card-footer mt-auto">🐿️</div>
+        </article>
+      </div>
+
+      <div class="col">
+        <article class="card h-100 d-flex flex-column">
+          <header class="card-header d-flex justify-content-between">
+            <h2 class="h5 mb-0">Swimming</h2>
+          </header>
+          <div class="ratio overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1615963244664-5b845b2025ee?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dGlnZXJ8ZW58MHx8MHx8fDA%3D"
+              class="card-img-top w-100 h-100 object-fit-cover" alt="FlY AWAY">
+          </div>
+          <div class="card-body flex-grow-1">
+            <div class="fw-bold">175 Likes</div>
+            <p class="card-text">
+              See the sky
+              <a href="#" class="post__tag">@sneaky</a>
+            </p>
+          </div>
+          <div class="card-footer mt-auto">🐅</div>
+        </article>
+      </div>
+
+      <div class="col">
+        <article class="card h-100 d-flex flex-column">
+          <header class="card-header d-flex justify-content-between">
+            <h2 class="h5 mb-0">Flowers</h2>
+          </header>
+          <div class="ratio overflow-hidden">
+            <img
+              src="https://media.istockphoto.com/id/2185284522/photo/migrating-monarch-butterfly-feeding-on-cosmos-flower.webp?a=1&b=1&s=612x612&w=0&k=20&c=I5uRsBzU1TFBg4AgDABDqttxHR8deHOe06-LQwl0epk="
+              class="card-img-top w-100 h-100 object-fit-cover" alt="FlY AWAY">
+          </div>
+          <div class="card-body flex-grow-1">
+            <div class="fw-bold">205 Likes</div>
+            <p class="card-text">
+              Nectuar
+              <a href="#" class="post__tag">@Gentle</a>
+            </p>
+          </div>
+          <div class="card-footer mt-auto">🦋</div>
+        </article>
+      </div>
+
+    </div>
   </main>
+
   <div class="modal fade" id="createPostModal" tabindex="-1" aria-labelledby="createPostLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -140,89 +301,33 @@
         </div>
 
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary">Close</button>
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Publish</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="galleryLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="galleryLabel">Photos Selections</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-
-        <div class="modal-body">
-          <div class="row row-cols-2 row-cols-md-3 g-2">
-            <div class="col">
-              <div class="ratio ratio-1x1">
-                <img class="w-100 h-100 rounded" style="object-fit:cover"
-                  src="https://plus.unsplash.com/premium_photo-1723708863829-7a079bbcc149?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="Chocolate Labs">
-              </div>
-            </div>
-            <div class="col">
-              <div class="ratio ratio-1x1">
-                <img class="w-100 h-100 rounded" style="object-fit:cover"
-                  src="https://plus.unsplash.com/premium_photo-1669725687221-6fe12c2da6b1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YW5pbWFsc3xlbnwwfHwwfHx8MA%3D%3D"
-                  alt="Lion">
-              </div>
-            </div>
-            <div class="col">
-              <div class="ratio ratio-1x1">
-                <img class="w-100 h-100 rounded" style="object-fit:cover"
-                  src="https://images.unsplash.com/photo-1527161153332-99adcc6f2966?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="Elephants">
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal-footer">
           <button class="btn btn-secondary" data-bs-dismiss="modal" type="button">Close</button>
         </div>
       </div>
     </div>
   </div>
+
   <script>
-  const feed    = document.querySelector('.feed');
-  const btnGrid = document.getElementById('btnGrid');   
-  const btnList = document.getElementById('btnList');      
+    const feed = document.querySelector('.feed');
+    const btnGrid = document.getElementById('btnGrid');
+    const btnList = document.getElementById('btnList');
 
-  function setMode(mode) {
-    const isGrid = mode === 'grid';
-
-    // 1) Layout
-    feed.classList.toggle('grid', isGrid);
-
-    // 2) Button appearances (make it explicit, no toggle confusion)
-    if (isGrid) {
-      btnGrid.classList.remove('btn-light');
-      btnGrid.classList.add('btn-primary');
-
-      btnList.classList.remove('btn-primary');
-      btnList.classList.add('btn-light');
-    } else {
-      btnGrid.classList.remove('btn-primary');
-      btnGrid.classList.add('btn-light');
-
-      btnList.classList.remove('btn-light');
-      btnList.classList.add('btn-primary');
+    function setMode(mode) {
+      const isGrid = mode === 'grid';
+      feed.classList.toggle('grid', isGrid);
+      if (isGrid) {
+        btnGrid.classList.remove('btn-light'); btnGrid.classList.add('btn-primary');
+        btnList.classList.remove('btn-primary'); btnList.classList.add('btn-light');
+      } else {
+        btnGrid.classList.remove('btn-primary'); btnGrid.classList.add('btn-light');
+        btnList.classList.remove('btn-light'); btnList.classList.add('btn-primary');
+      }
     }
-  }
 
-  // Wire up clicks
-  btnGrid.addEventListener('click', () => setMode('grid'));
-  btnList.addEventListener('click', () => setMode('list'));
-
-  // Start in list mode
-  setMode('list');
-</script>
-
-
-
+    btnGrid.addEventListener('click', () => setMode('grid'));
+    btnList.addEventListener('click', () => setMode('list'));
+    setMode('list');
+  </script>
 </body>
 
 </html>
